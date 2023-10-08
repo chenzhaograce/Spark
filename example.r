@@ -5,7 +5,7 @@ library(sparklyr)
 sc <- spark_connect(master = "local")
 
 # Read data from a CSV file into a Spark DataFrame
-df <- spark_read_csv(sc, "titanic_train.csv")
+df <- spark_read_csv(sc, "https://raw.githubusercontent.com/chenzhaograce/Spark/main/titanic_train.csv")
 
 # Filter the DataFrame to only include rows where the age column is greater than 30
 df_filtered <- filter(df, Age > 30)
